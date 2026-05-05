@@ -32,7 +32,7 @@
   .wrap {
     max-width: 900px;
     margin: auto;
-    padding: 18px 14px 24px 14px;
+    padding: 18px 14px 30px 14px;
   }
 
   h2 {
@@ -90,15 +90,36 @@
     display: block;
     margin: 10px 0;
     padding: 8px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
     border: 1px solid var(--border);
+  }
+
+  button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 6px;
+  }
+
+  button:hover {
+    opacity: 0.85;
   }
 </style>
 </head>
 
 <body>
 <div class="wrap">
+
+<h2>🎉 Fredagsquiz</h2>
+<p>Trykk på spørsmålene for å se svarene.</p>
+
+<!-- 🔽 HER STARTER SPØRSMÅLENE 🔽 -->
 
 <h2>🎉 Fredagsquiz</h2>
 <p>Trykk på spørsmålene for å se svarene.</p>
@@ -244,6 +265,19 @@
   <div class="answer"><b>Svar:</b> Slaget ved Narva</div>
 </details>
 
+  <div style="margin-top: 28px; text-align: center;">
+  <button onclick="openAll()">Vis alle svar</button>
+  <button onclick="closeAll()">Skjul alle svar</button>
 </div>
+
+</div>
+  <script>
+  function openAll() {
+    document.querySelectorAll("details").forEach(d => d.open = true);
+  }
+  function closeAll() {
+    document.querySelectorAll("details").forEach(d => d.open = false);
+  }
+</script>
 </body>
 </html>
