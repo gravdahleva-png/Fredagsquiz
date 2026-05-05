@@ -7,7 +7,8 @@
 
 <style>
   :root {
-    --bg: #f4f7fb;
+    --bg-dark: #1f2a44;
+    --bg-light: #f4f7fb;
     --card: #ffffff;
     --border: #d7dfec;
     --primary: #0b57d0;
@@ -18,25 +19,31 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: var(--bg);
+    background: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #2b3a60 15%,
+      var(--bg-light) 45%,
+      var(--bg-light) 100%
+    );
     color: #111;
   }
 
   .wrap {
     max-width: 900px;
     margin: auto;
-    padding: 14px;
+    padding: 18px 14px 24px 14px;
   }
 
   h2 {
     margin-bottom: 6px;
-    color: var(--primary);
+    color: #ffffff;
     letter-spacing: 0.3px;
   }
 
   p {
     margin-top: 0;
-    color: #444;
+    color: #e4e8f2;
   }
 
   details {
@@ -58,15 +65,11 @@
     padding: 12px;
     font-weight: bold;
     color: var(--question);
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
+    list-style: none;
   }
 
-  summary::before {
-    content: "❓";
-    font-size: 1.1em;
-    margin-top: 1px;
+  summary::-webkit-details-marker {
+    display: none;
   }
 
   summary:hover {
