@@ -4,42 +4,92 @@
 <meta charset="UTF-8">
 <title>Fredagsquiz</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+  :root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --border: #d7dfec;
+    --primary: #0b57d0;
+    --question: #1f2a44;
+    --answerbg: #eef7f1;
+  }
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #ffffff;
+    background: var(--bg);
     color: #111;
   }
+
   .wrap {
     max-width: 900px;
     margin: auto;
-    padding: 12px;
+    padding: 14px;
   }
+
   h2 {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    color: var(--primary);
+    letter-spacing: 0.3px;
   }
+
   p {
     margin-top: 0;
+    color: #444;
   }
+
   details {
-    border: 1px solid #e6e6e6;
-    border-radius: 10px;
-    background: #fafafa;
-    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
+
+  details:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  }
+
   summary {
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
+    color: var(--question);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
   }
+
+  summary::before {
+    content: "❓";
+    font-size: 1.1em;
+    margin-top: 1px;
+  }
+
+  summary:hover {
+    background: #f0f4ff;
+    border-radius: 12px 12px 0 0;
+  }
+
   .answer {
-    padding: 0 12px 12px 20px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, var(--answerbg), #f9fcfa);
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 12px 12px;
+    color: #1f3d2b;
   }
+
   .logo {
     max-width: 220px;
     display: block;
-    margin: 10px 0 5px 0;
+    margin: 10px 0;
+    padding: 8px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--border);
   }
 </style>
 </head>
