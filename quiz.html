@@ -2,84 +2,86 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8">
-<title>Fredagsquiz – test</title>
+<title>Fredagsquiz</title>
 <style>
-  body {
+  body{
+    margin:0;
     font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    padding: 10px;
+    background:#fff;
+    color:#111;
   }
-  .question {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 12px;
+  .wrap{
+    max-width:900px;
+    margin:auto;
+    padding:10px;
   }
-  .answerBox {
-    display: none;
-    margin-top: 10px;
-    background: #f5f7fa;
-    padding: 8px;
-    border-radius: 6px;
+  h2{
+    margin-bottom:5px;
   }
-  button {
-    margin-top: 6px;
-    padding: 6px 12px;
-    font-weight: bold;
+  p{
+    margin-top:0;
+  }
+  details{
+    border:1px solid #e6e6e6;
+    border-radius:10px;
+    margin-bottom:8px;
+    background:#fafafa;
+  }
+  summary{
+    cursor:pointer;
+    padding:10px;
+    font-weight:bold;
+  }
+  .answer{
+    padding:0 10px 10px 20px;
+  }
+  img{
+    max-width:100%;
+    margin:10px 0;
   }
 </style>
 </head>
 
 <body>
+<div class="wrap">
 <h2>🎉 Fredagsquiz</h2>
-<p>Svar på hvert spørsmål. Fasit vises først etter at svaret er sendt.</p>
+<p>Trykk på spørsmålene for å se svarene.</p>
 
-<div id="quiz"></div>
+<h3>Del 1</h3>
 
-<script>
-const questions = [
-  {
-    q: "Hva heter verdens største hav?",
-    a: "Stillehavet"
-  },
-  {
-    q: "Hvem var USAs andre president?",
-    a: "John Adams"
-  },
-  {
-    q: "Hvor mange ringer er det i det olympiske flagget?",
-    a: "Fem"
-  }
-];
+<details>
+  <summary>1. Dette er en taipan, en svært giftig slange. I hvilket land lever den hovedsakelig?</summary>
+  <div class="answer"><b>Svar:</b> Australia</div>
+</details>
 
-const quizEl = document.getElementById("quiz");
+<details>
+  <summary>2. Hva heter gårdsgutten til bestemor Duck?</summary>
+  <div class="answer"><b>Svar:</b> Guffen</div>
+</details>
 
-questions.forEach((item, i) => {
-  const div = document.createElement("div");
-  div.className = "question";
-  div.innerHTML = `
-    <b>${i + 1}. ${item.q}</b><br><br>
-    <input type="text" id="svar${i}" placeholder="Skriv svaret her" style="width:100%">
-    <br>
-    <button onclick="submitAnswer(${i})">Send svar</button>
+<details>
+  <summary>3. Hva er LO en forkortelse for i norsk samfunnsliv? Ett ord er nok.</summary>
+  <div class="answer"><b>Svar:</b> Landsorganisasjonen</div>
+</details>
 
-    <div class="answerBox" id="fasit${i}">
-      <b>Fasit:</b> ${item.a}
-    </div>
-  `;
-  quizEl.appendChild(div);
-});
+<details>
+  <summary>4. I hvilket år sto slagene ved Stamford Bridge og Hastings?</summary>
+  <div class="answer"><b>Svar:</b> 1066</div>
+</details>
 
-function submitAnswer(i) {
-  const input = document.getElementById("svar" + i);
-  if (input.value.trim() === "") {
-    alert("Skriv inn et svar først 🙂");
-    return;
-  }
-  document.getElementById("fasit" + i).style.display = "block";
-}
-</script>
+<details>
+  <summary>5. I hvilken film fra 2006 spiller Daniel Craig rollen som James Bond?</summary>
+  <div class="answer"><b>Svar:</b> Casino Royale</div>
+</details>
 
-</body>
-</html>
+<details>
+  <summary>6. Fra hvilken øy kommer dessertkaken cassata?</summary>
+  <div class="answer"><b>Svar:</b> Sicilia</div>
+</details>
+
+<details>
+  <summary>7. Hva heter Norges forsvarsminister?</summary>
+  <div class="answer"><b>Svar:</b> Tore O. Sandvik</div>
+</details>
+
+<details>
