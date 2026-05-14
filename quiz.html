@@ -1,1 +1,136 @@
 
+---
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<title>Fredagsquiz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  :root {
+    --bg-dark: #1f2a44;
+    --bg-light: #f4f7fb;
+    --card: #ffffff;
+    --border: #d7dfec;
+    --primary: #0b57d0;
+    --question: #1f2a44;
+    --answerbg: #eef7f1;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+      180deg,
+      var(--bg-dark) 0%,
+      #2b3a60 15%,
+      var(--bg-light) 45%,
+      var(--bg-light) 100%
+    );
+    color: #111;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: auto;
+    padding: 18px 14px 30px;
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 6px;
+  }
+
+  p {
+    color: #e4e8f2;
+  }
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+  summary {
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .answer {
+    padding: 14px;
+    background: linear-gradient(135deg, var(--answerbg), #f9fcfa);
+    border-top: 1px solid var(--border);
+  }
+
+  button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 6px;
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<h2>🎉 Fredagsquiz</h2>
+<p>Trykk på spørsmålene for å se svarene.</p>
+
+<details><summary>1. Hva heter denne mannen som går av som toppsjef for Apple?</summary><div class="answer"><b>Svar:</b> Tim Cook</div></details>
+<details><summary>2. Hvilket ord på P brukes om antall hjerteslag per minutt?</summary><div class="answer"><b>Svar:</b> Puls</div></details>
+<details><summary>3. Hva er det norske navnet på Côte d’Azur?</summary><div class="answer"><b>Svar:</b> Rivieraen</div></details>
+<details><summary>4. Hvem skapte tegneserien «Pondus»?</summary><div class="answer"><b>Svar:</b> Frode Øverli</div></details>
+<details><summary>5. Hva var fornavnet til presten Moe?</summary><div class="answer"><b>Svar:</b> Jørgen</div></details>
+<details><summary>6. Hvilken festival holdes nå på Ekebergsletta?</summary><div class="answer"><b>Svar:</b> Tons of Rock</div></details>
+<details><summary>7. Hva kalles tak med planter fra bergknappslekta?</summary><div class="answer"><b>Svar:</b> Sedumtak</div></details>
+<details><summary>8. Hvilken fisk kalles også havtaske og sjødjevel?</summary><div class="answer"><b>Svar:</b> Breiflabb</div></details>
+<details><summary>9. Hvem fikk Nobelprisen i litteratur i 1957?</summary><div class="answer"><b>Svar:</b> Albert Camus</div></details>
+<details><summary>10. I hvilken hovedstad skjedde ambassadeaksjonen i 1975?</summary><div class="answer"><b>Svar:</b> Stockholm</div></details>
+<details><summary>11. I hvilket år ble Ekstralekene i Aten avholdt?</summary><div class="answer"><b>Svar:</b> 1906</div></details>
+<details><summary>12. Svein Østvik er kjent under hvilket navn?</summary><div class="answer"><b>Svar:</b> Charter-Svein</div></details>
+<details><summary>13. Innen hvilken bransje er Heddaprisen viktig?</summary><div class="answer"><b>Svar:</b> Teater</div></details>
+<details><summary>14. Hvem er kunnskapsminister i Norge?</summary><div class="answer"><b>Svar:</b> Kari Nessa Nordtun</div></details>
+<details><summary>15. Hvem var propagandaminister i Tyskland 1933–1945?</summary><div class="answer"><b>Svar:</b> Joseph Goebbels</div></details>
+<details><summary>16. Hva står BYD for?</summary><div class="answer"><b>Svar:</b> Build Your Dreams</div></details>
+<details><summary>17. Hvilket band sang «Rockin' All Over the World»?</summary><div class="answer"><b>Svar:</b> Status Quo</div></details>
+<details><summary>18. I hvilken aktivitet er Javokhir Sindarov blant verdens beste?</summary><div class="answer"><b>Svar:</b> Sjakk</div></details>
+<details><summary>19. Hva slags dyr er en przewalski?</summary><div class="answer"><b>Svar:</b> Hest</div></details>
+<details><summary>20. Gro Eva Farseth er kjent under hvilket navn?</summary><div class="answer"><b>Svar:</b> Eva Joly</div></details>
+
+<div style="margin-top: 25px; text-align: center;">
+  <button onclick="openAll()">Vis alle svar</button>
+  <button onclick="closeAll()">Skjul alle svar</button>
+</div>
+
+</div>
+
+<script>
+function openAll() {
+  document.querySelectorAll("details").forEach(d => d.open = true);
+}
+function closeAll() {
+  document.querySelectorAll("details").forEach(d => d.open = false);
+}
+</script>
+
+</body>
+</html>
