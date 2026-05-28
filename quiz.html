@@ -9,10 +9,7 @@
   :root {
     --bg-dark: #1f2a44;
     --bg-light: #f4f7fb;
-    --card: #ffffff;
     --border: #d7dfec;
-    --primary: #0b57d0;
-    --question: #1f2a44;
     --answerbg: #eef7f1;
   }
 
@@ -26,61 +23,36 @@
       var(--bg-light) 45%,
       var(--bg-light) 100%
     );
-    color: #111;
   }
 
   .wrap {
     max-width: 900px;
     margin: auto;
-    padding: 18px 14px 30px;
+    padding: 20px;
   }
 
-  h2 {
-    color: #fff;
-    margin-bottom: 6px;
-  }
-
-  p {
-    color: #e4e8f2;
+  h1 {
+    color: white;
   }
 
   details {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
     border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--card);
-    margin-bottom: 12px;
   }
 
   summary {
-    padding: 12px;
     font-weight: bold;
     cursor: pointer;
-    list-style: none;
-  }
-
-  summary::-webkit-details-marker {
-    display: none;
+    padding: 10px;
   }
 
   .answer {
-    padding: 14px;
-    background: linear-gradient(135deg, var(--answerbg), #f9fcfa);
-    border-top: 1px solid var(--border);
-  }
-
-  button {
-    border: none;
-    padding: 10px 16px;
-    border-radius: 10px;
-    background: var(--primary);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 6px;
-  }
-
-  button:hover {
-    opacity: 0.85;
+    padding: 12px;
+    background: var(--answerbg);
+    border-radius: 0 0 8px 8px;
   }
 </style>
 </head>
@@ -88,53 +60,59 @@
 <body>
 <div class="wrap">
 
-<h2>🎉 Fredagsquiz</h2>
+<h1>🎉 Fredagsquiz</h1>
 
-<details><summary>1. Hva heter Sveriges nasjonalsang?</summary><div class="answer">Du gamla, du fria</div></details>
+<details><summary>1. Hvilken liten by i Buskerud har i vår hatt besøk av en hvithval?</summary><div class="answer">Hokksund</div></details>
 
-<details><summary>2. Hva heter fabrikken som produserte Tempo mopeder (og hvor lå den)?</summary><div class="answer">Jonas Øglænd AS i Sandnes</div></details>
+<details><summary>2. Hvilket er det letteste av kastredskapene som benyttes i friidrett?</summary><div class="answer">Spyd</div></details>
 
-<details><summary>3. I hvilket band har Syd Barrett, Nick Mason og Roger Waters vært medlemmer?</summary><div class="answer">Pink Floyd</div></details>
+<details><summary>3. Fra hvilket land kom den nobelprisvinnende forfatteren Halldór Laxness?</summary><div class="answer">Island</div></details>
 
-<details><summary>4. Var Abraham Lincoln demokrat eller republikaner?</summary><div class="answer">Republikaner</div></details>
+<details><summary>4. Hva står IA for når det er snakk om en avtale fra 2001 innen norsk næringsliv?</summary><div class="answer">Inkluderende arbeidsliv</div></details>
 
-<details><summary>5. Hva heter sangen der bestemor sitter i en gyngestol som er en stor potet?</summary><div class="answer">Musevisa</div></details>
+<details><summary>5. I hvilken fransk by har Interpol hovedkvarter?</summary><div class="answer">Lyon</div></details>
 
-<details><summary>6. Hvor lang er en ekstraomgang i fotball? Det er normalt to slike.</summary><div class="answer">15 minutter</div></details>
+<details><summary>6. I hvilket lite land ligger Mareterra der det nylig ble solgt en leilighet for fem milliarder kroner?</summary><div class="answer">Monaco</div></details>
 
-<details><summary>7. Hvilken norsk herreløper vant i 2014 OL i langrenn sprint?</summary><div class="answer">Ola Vigen Hattestad</div></details>
+<details><summary>7. Hvilket kvinnenavn forbindes med en gammel spinnemaskin?</summary><div class="answer">Jenny</div></details>
 
-<details><summary>8. Gisle Straume er kjent for å ha spilt hvilken rolle i «Stompa»?</summary><div class="answer">Lektor Tørrdal</div></details>
+<details><summary>8. Hva kalles russiske pannekaker laget av bokhvete?</summary><div class="answer">Blini</div></details>
 
-<details><summary>9. I hvilken by ble hestesport avholdt under OL i 1956 som for øvrig gikk i Melbourne?</summary><div class="answer">Stockholm</div></details>
+<details><summary>9. I hvilken by ligger hovedkvarteret til Den europeiske sentralbank?</summary><div class="answer">Frankfurt am Main</div></details>
 
-<details><summary>10. Hvilket lag fra Bergen kom til cupfinalen i 1990, men tapte 5–1 for Rosenborg?</summary><div class="answer">Fyllingen</div></details>
+<details><summary>10. Med engelske svar, hva kalles det når man lager spesielle valgkretser for å rigge valg?</summary><div class="answer">Gerrymandering</div></details>
 
-<details><summary>11. Nevlunghavn er ei bygd i hvilken kommune?</summary><div class="answer">Larvik</div></details>
+<details><summary>11. Hva heter Norges ballettsjef?</summary><div class="answer">Ingrid Lorentzen</div></details>
 
-<details><summary>12. I hvilket år som slutter på 3 åpnet den første McDonald’s‑restauranten i Norge?</summary><div class="answer">1983</div></details>
+<details><summary>12. I hvilket land ligger regionen Transnistria?</summary><div class="answer">Moldova</div></details>
 
-<details><summary>13. Med navn og nummer, hvem var fra 1952 til sin død i 2022 dronning av Storbritannia?</summary><div class="answer">Elizabeth II</div></details>
+<details><summary>13. Under hvilket navn er artisten Florian Cloud de Bounevialle Armstrong kjent?</summary><div class="answer">Dido</div></details>
 
-<details><summary>14. Hvilket ord på Y brukes om avkom fra fisk?</summary><div class="answer">Yngel</div></details>
+<details><summary>14. Hvilken tidligere langrennsløper ble kalt «Bromma-ekspressen»?</summary><div class="answer">Pål Gunnar Mikkelsplass</div></details>
 
-<details><summary>15. Hvilket band er kjent for sanger som «Harry» og «Vill, vakker og våt»?</summary><div class="answer">CC Cowboys</div></details>
+<details><summary>15. På hvilket stadion spilles normalt cupfinalen i fotball for herrer?</summary><div class="answer">Ullevaal Stadion</div></details>
 
-<details><summary>16. På hvilken flyplass ble Arne Treholt arrestert i 1984?</summary><div class="answer">Fornebu</div></details>
+<details><summary>16. Hvilket ord på N er et annet ord for blomsterhonning?</summary><div class="answer">Nektar</div></details>
 
-<details><summary>17. Hvilket norsk firma er kjent for å lage osten Primula? (ett ord holder)</summary><div class="answer">Kavli</div></details>
+<details><summary>17. I hvilket land ligger Bajkalsjøen?</summary><div class="answer">Russland</div></details>
 
-<details><summary>18. Hvor mange år er det i et sekel?</summary><div class="answer">100</div></details>
+<details><summary>18. I hvilket land var ekteparet Perón viktige i politikken etter annen verdenskrig?</summary><div class="answer">Argentina</div></details>
 
-<details><summary>19. Hvilken artist, kjent fra gruppen Shadows, het egentlig Harry Rodger Webb?</summary><div class="answer">Cliff Richard</div></details>
+<details><summary>19. Hvilken økonom er kjent for «The Wealth of Nations» fra 1776?</summary><div class="answer">Adam Smith</div></details>
 
-<details><summary>20. Hvem skrev på 1950‑tallet den omstridte boken «Sangen om den røde rubin»?</summary><div class="answer">Agnar Mykle</div></details>
+<details><summary>20. I hvilken idrett er Ironman et viktig mesterskap?</summary><div class="answer">Triatlon</div></details>
 
-<details><summary>21. Hvilken sangerinne fra Fifth Harmony synger sanger som «Havana» og «Bad Things»?</summary><div class="answer">Camila Cabello</div></details>
+<details><summary>21. Hva heter den berømte kraftstasjonen på Rjukan?</summary><div class="answer">Vemork</div></details>
 
-<details><summary>22. I hvilket år ble Sir Edmund Hillary og Tenzing Norgay de første på Mount Everest?</summary><div class="answer">1953</div></details>
+<details><summary>22. Hva er det latinske navnet på brunrotte?</summary><div class="answer">Rattus norvegicus</div></details>
 
-<details><summary>23. På hvilken italiensk øy finnes Den blå grotte?</summary><div class="answer">Capri</div></details>
+<details><summary>23. «Kjærast» blir trolig første film basert på bøkene til hvilken norsk forfatter?</summary><div class="answer">Jon Fosse</div></details>
+
+<details><summary>24. Hvilken maler fra 1880–1928 forbindes spesielt med Jølster i dagens Vestland fylke?</summary><div class="answer">Nikolai Astrup</div></details>
+
+<details><summary>25. Hva heter kvinnen bak «Girls» som nå er aktuell med memoarboken «Famesick»?</summary><div class="answer">Lena Dunham</div></details>
+
+<details><summary>26. I hvilken øygruppe er byen Puerto Ayora størst? Den ligger på Santa Cruz.</summary><div class="answer">Galápagos</div></details>
 
 </div>
 </body>
