@@ -11,6 +11,7 @@
     --bg-light: #f4f7fb;
     --border: #d7dfec;
     --answerbg: #eef7f1;
+    --primary: #0b57d0;
   }
 
   body {
@@ -31,8 +32,32 @@
     padding: 20px;
   }
 
-  h1 {
+  .quiztitle {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
     color: white;
+  }
+
+  .quizinfo {
+    color: white;
+    opacity: 0.9;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .showall {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .showall:hover {
+    opacity: 0.9;
   }
 
   details {
@@ -49,10 +74,39 @@
     padding: 10px;
   }
 
+  .nr {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
   .answer {
     padding: 12px;
     background: var(--answerbg);
     border-radius: 0 0 8px 8px;
+  }
+
+  details[open] .answer {
+    animation: fade .3s ease;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
 </head>
@@ -60,50 +114,66 @@
 <body>
 <div class="wrap">
 
-<h1>🎉 Fredagsquiz</h1>
+<h1 class="quiztitle">🏆 Fredagsquiz</h1>
 
-<details><summary>1. Hvilken liten by i Buskerud har i vår hatt besøk av en hvithval?</summary><div class="answer">Hokksund</div></details>
+<p class="quizinfo">
+22 spørsmål • Klikk på spørsmålene for å vise svar
+</p>
 
-<details><summary>2. Hvilket er det letteste av kastredskapene som benyttes i friidrett?</summary><div class="answer">Spyd</div></details>
+<button class="showall" onclick="showAll()">Vis alle svar</button>
 
-<details><summary>3. Fra hvilket land kom den nobelprisvinnende forfatteren Halldór Laxness?</summary><div class="answer">Island</div></details>
+<details><summary><span class="nr">1</span>Hvilken norsk forfatter ble berømt med bokserien «Min kamp»?</summary><div class="answer">Karl Ove Knausgård</div></details>
 
-<details><summary>4. Hva står IA for når det er snakk om en avtale fra 2001 innen norsk næringsliv?</summary><div class="answer">Inkluderende arbeidsliv</div></details>
+<details><summary><span class="nr">2</span>Hva er det norske navnet på den svært giftige planten Cicuta virosa?</summary><div class="answer">Selsnepe</div></details>
 
-<details><summary>5. I hvilken fransk by har Interpol hovedkvarter?</summary><div class="answer">Lyon</div></details>
+<details><summary><span class="nr">3</span>Hvilken beryktet person skrev en bok med samme tittel i 1925/26?</summary><div class="answer">Adolf Hitler</div></details>
 
-<details><summary>6. I hvilket lite land ligger Mareterra der det nylig ble solgt en leilighet for fem milliarder kroner?</summary><div class="answer">Monaco</div></details>
+<details><summary><span class="nr">4</span>Hvordan skrives 1000 med romertall?</summary><div class="answer">M</div></details>
 
-<details><summary>7. Hvilket kvinnenavn forbindes med en gammel spinnemaskin?</summary><div class="answer">Jenny</div></details>
+<details><summary><span class="nr">5</span>Hvilket selskap er kjent for slagordet «Connecting People»?</summary><div class="answer">Nokia</div></details>
 
-<details><summary>8. Hva kalles russiske pannekaker laget av bokhvete?</summary><div class="answer">Blini</div></details>
+<details><summary><span class="nr">6</span>Hvilket ord på Y er et annet ord for «den avskyelige snømannen»?</summary><div class="answer">Yeti</div></details>
 
-<details><summary>9. Hvilken tidligere langrennsløper ble kalt «Bromma-ekspressen»?</summary><div class="answer">Pål Gunnar Mikkelsplass</div></details>
+<details><summary><span class="nr">7</span>Også kalt nakenkatt, hva heter katterasen fra Canada?</summary><div class="answer">Sphynx</div></details>
 
-<details><summary>10. På hvilket stadion spilles normalt cupfinalen i fotball for herrer?</summary><div class="answer">Ullevaal Stadion</div></details>
+<details><summary><span class="nr">8</span>Hva heter kapellet der det kommer hvit røyk når det blir valgt ny pave?</summary><div class="answer">Det sixtinske kapell</div></details>
 
-<details><summary>11. Hvilket ord på N er et annet ord for blomsterhonning?</summary><div class="answer">Nektar</div></details>
+<details><summary><span class="nr">9</span>Hva heter bokserien som TV-serien «Game of Thrones» er basert på?</summary><div class="answer">A Song of Ice and Fire</div></details>
 
-<details><summary>12. I hvilket land ligger Bajkalsjøen?</summary><div class="answer">Russland</div></details>
+<details><summary><span class="nr">10</span>I hvilket lite, europeisk land fikk kvinner stemmerett ved nasjonale valg først i 1984?</summary><div class="answer">Liechtenstein</div></details>
 
-<details><summary>13. I hvilket land var ekteparet Perón viktige i politikken etter annen verdenskrig?</summary><div class="answer">Argentina</div></details>
+<details><summary><span class="nr">11</span>Hva er det egentlige navnet til den norske artisten Vinnie fra Paperboys?</summary><div class="answer">Øyvind Sauvik</div></details>
 
-<details><summary>14. Hvilken økonom er kjent for «The Wealth of Nations» fra 1776?</summary><div class="answer">Adam Smith</div></details>
+<details><summary><span class="nr">12</span>I norske hjem, har vi likestrøm eller vekselstrøm?</summary><div class="answer">Vekselstrøm</div></details>
 
-<details><summary>15. I hvilken idrett er Ironman et viktig mesterskap?</summary><div class="answer">Triatlon</div></details>
+<details><summary><span class="nr">13</span>Hvilken fiktiv karakter heter i det sivile Peter Parker?</summary><div class="answer">Spider-Man</div></details>
 
-<details><summary>16. Hva heter den berømte kraftstasjonen på Rjukan?</summary><div class="answer">Vemork</div></details>
+<details><summary><span class="nr">14</span>Fra hvilket land kommer motehuset Dolce &amp; Gabbana?</summary><div class="answer">Italia</div></details>
 
-<details><summary>17. Hva er det latinske navnet på brunrotte?</summary><div class="answer">Rattus norvegicus</div></details>
+<details><summary><span class="nr">15</span>Hvilket band ga i 1973 ut albumet «The Dark Side of the Moon»?</summary><div class="answer">Pink Floyd</div></details>
 
-<details><summary>18. «Kjærast» blir trolig første film basert på bøkene til hvilken norsk forfatter?</summary><div class="answer">Jon Fosse</div></details>
+<details><summary><span class="nr">16</span>Hvilken bukt ligger langs nordkysten av Spania og vestkysten av Frankrike?</summary><div class="answer">Biscayabukta</div></details>
 
-<details><summary>19. Hvilken maler fra 1880–1928 forbindes spesielt med Jølster i dagens Vestland fylke?</summary><div class="answer">Nikolai Astrup</div></details>
+<details><summary><span class="nr">17</span>Hvilken svensk forfatter skrev originalserien «Millennium» om Lisbeth Salander?</summary><div class="answer">Stieg Larsson</div></details>
 
-<details><summary>20. Hva heter kvinnen bak «Girls» som nå er aktuell med memoarboken «Famesick»?</summary><div class="answer">Lena Dunham</div></details>
+<details><summary><span class="nr">18</span>Hvilken arvelig sosial inndeling, kjent fra India, plasserer folk i et hierarkisk system?</summary><div class="answer">Kastesystemet</div></details>
 
-<details><summary>21. I hvilken øygruppe er byen Puerto Ayora størst? Den ligger på Santa Cruz.</summary><div class="answer">Galápagos</div></details>
+<details><summary><span class="nr">19</span>Hvilken filmregissør debuterte med «De hensynsløse» (Reservoir Dogs) i 1992?</summary><div class="answer">Quentin Tarantino</div></details>
+
+<details><summary><span class="nr">20</span>Hvilken nobelprisvinnende forfatter skrev i 1922 «Siddhartha» og i 1927 «Steppeulven»?</summary><div class="answer">Hermann Hesse</div></details>
+
+<details><summary><span class="nr">21</span>Han er mest kjent som president, men hvilken stilling hadde Vladimir Putin 2008–2012?</summary><div class="answer">Statsminister</div></details>
+
+<details><summary><span class="nr">22</span>For hvilken medisinsk behandling fikk António Egas Moniz Nobelpris i 1949?</summary><div class="answer">Lobotomi</div></details>
 
 </div>
+
+<script>
+function showAll(){
+  document.querySelectorAll("details")
+    .forEach(d => d.open = true);
+}
+</script>
+
 </body>
 </html>
