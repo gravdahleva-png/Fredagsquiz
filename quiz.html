@@ -2,112 +2,118 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8">
-<title>Fredagsquiz</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fredagsquiz</title>
 
 <style>
-  :root {
-    --bg-dark: #1f2a44;
-    --bg-light: #f4f7fb;
-    --border: #d7dfec;
-    --answerbg: #eef7f1;
-    --primary: #0b57d0;
-  }
+:root {
+  --border: #d7dfec;
+  --answerbg: #eef7f1;
+  --primary: #0b57d0;
+}
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(
-      180deg,
-      var(--bg-dark) 0%,
-      #2b3a60 15%,
-      var(--bg-light) 45%,
-      var(--bg-light) 100%
-    );
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 
-  .wrap {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-  }
+  background:
+    linear-gradient(
+      rgba(15,20,35,0.55),
+      rgba(15,20,35,0.55)
+    ),
+    url("fyr.jpg");
 
-  .quiztitle {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: white;
-  }
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
-  .quizinfo {
-    color: white;
-    opacity: 0.9;
-    margin-top: 0;
-    margin-bottom: 25px;
-  }
+.wrap {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-  .showall {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
+.quiztitle {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.6);
+}
 
-  .showall:hover {
-    opacity: 0.9;
-  }
+.quizinfo {
+  color: white;
+  opacity: 0.95;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
 
-  details {
-    background: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid var(--border);
-  }
+.showall {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-  }
+.showall:hover {
+  opacity: 0.9;
+}
 
-  .nr {
-    display: inline-flex;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--primary);
-    color: white;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    font-size: 14px;
-    font-weight: bold;
-  }
+details {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-  .answer {
-    padding: 12px;
-    background: var(--answerbg);
-    border-radius: 0 0 8px 8px;
-  }
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+}
 
-  details[open] .answer {
-    animation: fade .3s ease;
-  }
+.nr {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-  @keyframes fade {
-    from {
-      opacity: 0;
-      transform: translateY(-5px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.answer {
+  padding: 12px;
+  background: var(--answerbg);
+  border-radius: 0 0 8px 8px;
+}
+
+details[open] .answer {
+  animation: fade .3s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 
@@ -117,7 +123,7 @@
 <h1 class="quiztitle">🏆 Fredagsquiz</h1>
 
 <p class="quizinfo">
-22 spørsmål • Klikk på spørsmålene for å vise svar
+Klikk på spørsmålene for å vise svar
 </p>
 
 <button class="showall" onclick="showAll()">Vis alle svar</button>
@@ -169,7 +175,7 @@
 </div>
 
 <script>
-function showAll(){
+function showAll() {
   document.querySelectorAll("details")
     .forEach(d => d.open = true);
 }
