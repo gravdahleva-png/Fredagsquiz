@@ -21,11 +21,12 @@ body {
       rgba(15,20,35,0.55),
       rgba(15,20,35,0.55)
     ),
-    url("IMG_1612.jpeg");
+    url("./IMG_1612.jpeg");
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .wrap {
@@ -45,7 +46,7 @@ body {
   color: white;
   opacity: 0.95;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
@@ -118,6 +119,7 @@ details[open] .answer {
 </head>
 
 <body>
+
 <div class="wrap">
 
 <h1 class="quiztitle">🏆 Fredagsquiz</h1>
@@ -125,45 +127,111 @@ details[open] .answer {
 <p class="quizinfo">
 Klikk på spørsmålene for å vise svar
 </p>
-<details><summary><span class="nr">1</span>Hva er hovedstaden i Djibouti?</summary><div class="answer">Djibouti</div></details>
 
-<details><summary><span class="nr">2</span>Hvor mye fett er det i TINE Helmelk?</summary><div class="answer">3,5 %</div></details>
+<button class="showall" onclick="showAll()">Vis alle svar</button>
 
-<details><summary><span class="nr">3</span>Hva er «tørris» i fast form?</summary><div class="answer">Karbondioksid (CO₂)</div></details>
+<details>
+<summary><span class="nr">1</span>Hva er hovedstaden i Djibouti?</summary>
+<div class="answer">Djibouti</div>
+</details>
 
-<details><summary><span class="nr">4</span>Hvem var Sovjetunionens første president?</summary><div class="answer">Mikhail Gorbatsjov</div></details>
+<details>
+<summary><span class="nr">2</span>Hvor mye fett er det i TINE Helmelk?</summary>
+<div class="answer">3,5 %</div>
+</details>
 
-<details><summary><span class="nr">5</span>Hvem var den første presidenten i Frankrikes nåværende statsordning, den femte republikk?</summary><div class="answer">Charles de Gaulle</div></details>
+<details>
+<summary><span class="nr">3</span>Hva er «tørris» i fast form?</summary>
+<div class="answer">Karbondioksid (CO₂)</div>
+</details>
 
-<details><summary><span class="nr">6</span>Nevn alle de seks nordiske (nordgermanske) språkene.</summary><div class="answer">Norsk, svensk, dansk, islandsk, færøysk og älvdalsk</div></details>
+<details>
+<summary><span class="nr">4</span>Hvem var Sovjetunionens første president?</summary>
+<div class="answer">Mikhail Gorbatsjov</div>
+</details>
 
-<details><summary><span class="nr">7</span>Hva er den språklige forbindelsen mellom det vikingene kalte Istanbul og den tyske delstaten der AfD vant en stor seier forrige uke?</summary><div class="answer">Miklagard og Mecklenburg-Vorpommern</div></details>
+<details>
+<summary><span class="nr">5</span>Hvem var den første presidenten i Frankrikes nåværende statsordning, den femte republikk?</summary>
+<div class="answer">Charles de Gaulle</div>
+</details>
 
-<details><summary><span class="nr">8</span>Hvor mange delstater er det i USA?</summary><div class="answer">50</div></details>
+<details>
+<summary><span class="nr">6</span>Nevn alle de seks nordiske (nordgermanske) språkene.</summary>
+<div class="answer">Norsk, svensk, dansk, islandsk, færøysk og älvdalsk</div>
+</details>
 
-<details><summary><span class="nr">9</span>Hvor mange delstater er det i Tyskland?</summary><div class="answer">16</div></details>
+<details>
+<summary><span class="nr">7</span>Hva er den språklige forbindelsen mellom det vikingene kalte Istanbul og den tyske delstaten der AfD vant en stor seier forrige uke?</summary>
+<div class="answer">Miklagard og Mecklenburg-Vorpommern</div>
+</details>
 
-<details><summary><span class="nr">10</span>Hvor mange republikker er det i Russland?</summary><div class="answer">21</div></details>
+<details>
+<summary><span class="nr">8</span>Hvor mange delstater er det i USA?</summary>
+<div class="answer">50</div>
+</details>
 
-<details><summary><span class="nr">11</span>Hva er en idiomatisk måte å si «he wasn’t fazed» på norsk?</summary><div class="answer">Han lot seg ikke vippe av pinnen</div></details>
+<details>
+<summary><span class="nr">9</span>Hvor mange delstater er det i Tyskland?</summary>
+<div class="answer">16</div>
+</details>
 
-<details><summary><span class="nr">12</span>Hva kan man kalle en «venstrehendt» sitron?</summary><div class="answer">Appelsin. Sitronluktmolekylet limonen finnes i to speilbildeformer – den ene lukter sitron, den andre appelsin.</div></details>
+<details>
+<summary><span class="nr">10</span>Hvor mange republikker er det i Russland?</summary>
+<div class="answer">21</div>
+</details>
 
-<details><summary><span class="nr">13</span>Hva er en «bananaquit»?</summary><div class="answer">En spurvefugl (banansmett)</div></details>
+<details>
+<summary><span class="nr">11</span>Hva er en idiomatisk måte å si «he wasn’t fazed» på norsk?</summary>
+<div class="answer">Han lot seg ikke vippe av pinnen</div>
+</details>
 
-<details><summary><span class="nr">14</span>I, O, U og Y – men ikke A eller E. Hva har disse fire bokstavene til felles?</summary><div class="answer">De er kjemiske symboler for grunnstoffer: I = jod, O = oksygen, U = uran og Y = yttrium. A og E er ikke grunnstoffsymboler.</div></details>
+<details>
+<summary><span class="nr">12</span>Hva kan man kalle en «venstrehendt» sitron?</summary>
+<div class="answer">Appelsin. Sitronluktmolekylet limonen finnes i to speilbildeformer – den ene lukter sitron, den andre appelsin.</div>
+</details>
 
-<details><summary><span class="nr">15</span>Hvilken norsk statsrådspost fikk Kamzy Gunaratnam nylig?</summary><div class="answer">Samferdselsminister</div></details>
+<details>
+<summary><span class="nr">13</span>Hva er en «bananaquit»?</summary>
+<div class="answer">En spurvefugl (banansmett)</div>
+</details>
 
-<details><summary><span class="nr">16</span>Hvilket fotballag spiller hjemmekampene sine på Aspmyra?</summary><div class="answer">Bodø/Glimt</div></details>
+<details>
+<summary><span class="nr">14</span>I, O, U og Y – men ikke A eller E. Hva har disse fire bokstavene til felles?</summary>
+<div class="answer">De er kjemiske symboler for grunnstoffer: I = jod, O = oksygen, U = uran og Y = yttrium. A og E er ikke grunnstoffsymboler.</div>
+</details>
 
-<details><summary><span class="nr">17</span>Hva er det vanlige navnet på Republikken Kina?</summary><div class="answer">Taiwan</div></details>
+<details>
+<summary><span class="nr">15</span>Hvilken norsk statsrådspost fikk Kamzy Gunaratnam nylig?</summary>
+<div class="answer">Samferdselsminister</div>
+</details>
 
-<details><summary><span class="nr">18</span>Ranger fra raskest til saktest: 5 m/s, 10 knop og 20 km/t.</summary><div class="answer">20 km/t – 10 knop – 5 m/s</div></details>
+<details>
+<summary><span class="nr">16</span>Hvilket fotballag spiller hjemmekampene sine på Aspmyra?</summary>
+<div class="answer">Bodø/Glimt</div>
+</details>
 
-<details><summary><span class="nr">19</span>Hva er fellesnavnet på stjernene Alnitak, Alnilam og Mintaka?</summary><div class="answer">Orions belte</div></details>
+<details>
+<summary><span class="nr">17</span>Hva er det vanlige navnet på Republikken Kina?</summary>
+<div class="answer">Taiwan</div>
+</details>
 
-<details><summary><span class="nr">20</span>Hva foreslo Donald Trump denne uken under FNs generalforsamling å kalle AI?</summary><div class="answer">Super Intelligence</div></details>
+<details>
+<summary><span class="nr">18</span>Ranger fra raskest til saktest: 5 m/s, 10 knop og 20 km/t.</summary>
+<div class="answer">20 km/t – 10 knop – 5 m/s</div>
+</details>
+
+<details>
+<summary><span class="nr">19</span>Hva er fellesnavnet på stjernene Alnitak, Alnilam og Mintaka?</summary>
+<div class="answer">Orions belte</div>
+</details>
+
+<details>
+<summary><span class="nr">20</span>Hva foreslo Donald Trump denne uken under FNs generalforsamling å kalle AI?</summary>
+<div class="answer">Super Intelligence</div>
+</details>
+
+</div>
+
 <script>
 function showAll() {
   document.querySelectorAll("details")
