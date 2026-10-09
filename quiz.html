@@ -1,237 +1,257 @@
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fredagsquiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fredagsquiz</title>
 
-<style>
-:root {
-  --border: #d7dfec;
-  --answerbg: #eef7f1;
-  --primary: #0b57d0;
-}
+  <style>
+    :root {
+      --border: #d7dfec;
+      --answerbg: #eef7f1;
+      --primary: #0b57d0;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        linear-gradient(
+          rgba(15,20,35,0.55),
+          rgba(15,20,35,0.55)
+        ),
+        url("./IMG_1612.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
 
-  background:
-    linear-gradient(
-      rgba(15,20,35,0.55),
-      rgba(15,20,35,0.55)
-    ),
-    url("./IMG_3044.jpeg");
+    .wrap {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
+    .quiztitle {
+      font-size: 3rem;
+      margin-bottom: 5px;
+      color: white;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.6);
+    }
 
-.wrap {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+    .quizinfo {
+      color: white;
+      opacity: 0.95;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
 
-.quiztitle {
-  font-size: 3rem;
-  margin-bottom: 5px;
-  color: white;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.6);
-}
+    .showall {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
 
-.quizinfo {
-  color: white;
-  opacity: 0.95;
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
+    .showall:hover {
+      opacity: 0.9;
+    }
 
-.showall {
-  background: var(--primary);
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+    details {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.showall:hover {
-  opacity: 0.9;
-}
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+    }
 
-details {
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    .nr {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px;
-}
+    .answer {
+      padding: 12px;
+      background: var(--answerbg);
+      border-radius: 0 0 8px 8px;
+    }
 
-.nr {
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: white;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
+    details[open] .answer {
+      animation: fade .3s ease;
+    }
 
-.answer {
-  padding: 12px;
-  background: var(--answerbg);
-  border-radius: 0 0 8px 8px;
-}
-
-details[open] .answer {
-  animation: fade .3s ease;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
-<h1 class="quiztitle">🏆 Fredagsquiz</h1>
+  <h1 class="quiztitle">🏆 Fredagsquiz</h1>
+  <p class="quizinfo">Klikk på spørsmålene for å vise svar</p>
 
-<p class="quizinfo">
-Klikk på spørsmålene for å vise svar
-</p>
+  <button class="showall" onclick="showAll()">Vis alle svar</button>
 
-<button class="showall" onclick="showAll()">Vis alle svar</button>
+  <details>
+    <summary><span class="nr">1</span>Hva heter hylsteret som larver av sommerfugler og mange andre insekter spinner rundt seg?</summary>
+    <div class="answer">Kokong</div>
+  </details>
 
-<details>
-<summary><span class="nr">1</span>Hvem jobbet i 2006 som Paris Hiltons stylist, men skulle snart bli mer berømt enn sjefen?</summary>
-<div class="answer">Kim Kardashian</div>
-</details>
+  <details>
+    <summary><span class="nr">2</span>I hvilken TV-serie foregår handlingen på kontinentene Westeros og Essos?</summary>
+    <div class="answer">Game of Thrones</div>
+  </details>
 
-<details>
-<summary><span class="nr">2</span>Hva slags mykt leketøy har navn etter den amerikanske presidenten Theodore Roosevelt?</summary>
-<div class="answer">Teddybjørn</div>
-</details>
+  <details>
+    <summary><span class="nr">3</span>Hva slags blad finner du i flagget til Canada?</summary>
+    <div class="answer">Lønn (lønneblad)</div>
+  </details>
 
-<details>
-<summary><span class="nr">3</span>Hva het nettsamfunnet X frem til 2023?</summary>
-<div class="answer">Twitter</div>
-</details>
+  <details>
+    <summary><span class="nr">4</span>Hva er neste ord i åpningslinjen i «Sult» av Hamsun: «Det var i den Tid jeg gikk omkring og sulted i …»?</summary>
+    <div class="answer">Kristiania</div>
+  </details>
 
-<details>
-<summary><span class="nr">4</span>Én rekke i Lotto består av syv tall. Hvor mange tall kan du velge mellom?</summary>
-<div class="answer">34 (1 til 34)</div>
-</details>
+  <details>
+    <summary><span class="nr">5</span>Hva kalles menneskenes verden i norrøn mytologi?</summary>
+    <div class="answer">Midgard</div>
+  </details>
 
-<details>
-<summary><span class="nr">5</span>Hvilket fotballag spiller hjemmekampene sine på Sparebanken Norge Arena?</summary>
-<div class="answer">Start</div>
-</details>
+  <details>
+    <summary><span class="nr">6</span>Hvilke to havområder forbindes av Suezkanalen?</summary>
+    <div class="answer">Middelhavet og Rødehavet</div>
+  </details>
 
-<details>
-<summary><span class="nr">6</span>Hvilken tittel har lederen for en tingrett?</summary>
-<div class="answer">Sorenskriver</div>
-</details>
+  <details>
+    <summary><span class="nr">7</span>Hva betyr autodidakt?</summary>
+    <div class="answer">Selvlært</div>
+  </details>
 
-<details>
-<summary><span class="nr">7</span>Hva heter Trondheims høyeste byggverk?</summary>
-<div class="answer">Tyholttårnet</div>
-</details>
+  <details>
+    <summary><span class="nr">8</span>Hva heter forfatteren bak karakterene Winston Smith, Napoleon og Mr. Charrington?</summary>
+    <div class="answer">George Orwell</div>
+  </details>
 
-<details>
-<summary><span class="nr">8</span>I hvilket land med 5,4 millioner innbyggere er Haitham bin Tariq sultan?</summary>
-<div class="answer">Oman</div>
-</details>
+  <details>
+    <summary><span class="nr">9</span>Hvilket ord på s brukes om omslaget som beskytter en bok?</summary>
+    <div class="answer">Smussomslag</div>
+  </details>
 
-<details>
-<summary><span class="nr">9</span>Hvilken klesprodusent ble grunnlagt i South Shields i England i 1894, og er særlig kjent for ytterjakker i vokset bomull?</summary>
-<div class="answer">Barbour</div>
-</details>
+  <details>
+    <summary><span class="nr">10</span>Hva kalles den komiske teaterformen der man bare bruker kroppsspråk, mimikk og gester i stedet for replikker?</summary>
+    <div class="answer">Pantomime</div>
+  </details>
 
-<details>
-<summary><span class="nr">10</span>Hvilken Bond-film var den første som Daniel Craig hadde hovedrollen i?</summary>
-<div class="answer">Casino Royale</div>
-</details>
+  <details>
+    <summary><span class="nr">11</span>Hvilket legetidsskrift med navn etter et engelsk ord for skalpell har utkommet siden 1823?</summary>
+    <div class="answer">The Lancet</div>
+  </details>
 
-<details>
-<summary><span class="nr">11</span>Hvilken idrett spilles på Fenway Park, som er USAs eldste stadion i sitt slag?</summary>
-<div class="answer">Baseball</div>
-</details>
+  <details>
+    <summary><span class="nr">12</span>Ulven er ett av tre pattedyr med status «kritisk truet» i Norge. Hva slags dyr er de to andre artene?</summary>
+    <div class="answer">Flaggermus</div>
+  </details>
 
-<details>
-<summary><span class="nr">12</span>Hva er det norske navnet på «crayfish»?</summary>
-<div class="answer">Kreps</div>
-</details>
+  <details>
+    <summary><span class="nr">13</span>Hvilken kroppsdel fra en bevinget vær jakter Jason og argonautene på i Kolkhis?</summary>
+    <div class="answer">Skinnet (Det gylne skinn)</div>
+  </details>
 
-<details>
-<summary><span class="nr">13</span>Tilcayoen er den første nyoppdagede arten i sin familie på over 100 år. Hva slags dyr er den?</summary>
-<div class="answer">Kattedyr</div>
-</details>
+  <details>
+    <summary><span class="nr">14</span>Hvilken av løvtreartene i Norge lever lengst?</summary>
+    <div class="answer">Eik</div>
+  </details>
 
-<details>
-<summary><span class="nr">14</span>Hva heter hovedpersonen i Tore Renberg-romanene «Mannen som elsket Yngve», «Kompani Orheim» og «Pixley Mapogo»?</summary>
-<div class="answer">Jarle Klepp</div>
-</details>
+  <details>
+    <summary><span class="nr">15</span>Hva heter Telemarks mest folkerike kommune?</summary>
+    <div class="answer">Skien</div>
+  </details>
 
-<details>
-<summary><span class="nr">15</span>Hvordan lyder det svenske navnet på tyttebær?</summary>
-<div class="answer">Lingon</div>
-</details>
+  <details>
+    <summary><span class="nr">16</span>Hvem har fått strålende kritikk for romanen «Et livsforsøk»?</summary>
+    <div class="answer">Tore Renberg</div>
+  </details>
 
-<details>
-<summary><span class="nr">16</span>Hvem feires den andre søndagen i februar?</summary>
-<div class="answer">Mødre (morsdag)</div>
-</details>
+  <details>
+    <summary><span class="nr">17</span>Hvilket navn med forbokstav p har dyret som kalles «coyote» i USA?</summary>
+    <div class="answer">Prærieulv</div>
+  </details>
 
-<details>
-<summary><span class="nr">17</span>Hvilket navn hadde den germanske stammen som befolket Jylland i romertiden, og brukes av og til synonymt med tyskere?</summary>
-<div class="answer">Teutonere</div>
-</details>
+  <details>
+    <summary><span class="nr">18</span>Hva kalles krydderet fra urteplanten bergmynte?</summary>
+    <div class="answer">Oregano</div>
+  </details>
 
-<details>
-<summary><span class="nr">18</span>Hvilken norsk sprinter tok gull på 400 meter i årets friidretts-EM i Birmingham?</summary>
-<div class="answer">Henriette Jæger</div>
-</details>
+  <details>
+    <summary><span class="nr">19</span>Hvilken moralsk oppbyggelig eventyrsjanger har gitt navn til en strømmetjeneste for lydbøker?</summary>
+    <div class="answer">Fabel</div>
+  </details>
 
-<details>
-<summary><span class="nr">19</span>Fem av de tolv stjernebildene i dyrekretsen (zodiaken) er ikke dyr. Hva heter de fem?</summary>
-<div class="answer">Tvillingene, Jomfruen, Vekten, Skytten og Vannmannen</div>
-</details>
+  <details>
+    <summary><span class="nr">20</span>Hvilket ord på i brukes om fettet rundt dyrs innvoller?</summary>
+    <div class="answer">Ister</div>
+  </details>
+
+  <details>
+    <summary><span class="nr">21</span>I hvilken film fra 2006 vandrer Clive Owen gjennom en verden hvor ingen får barn?</summary>
+    <div class="answer">Children of Men</div>
+  </details>
+
+  <details>
+    <summary><span class="nr">22</span>Med et slingringsmonn på 500 millioner år: Hvor gammel er jordkloden?</summary>
+    <div class="answer">Omtrent 4,5 milliarder år (4–5 milliarder godtas)</div>
+  </details>
+
+  <details>
+    <summary><span class="nr">23</span>Hvilke to ord forekommer oftest i tekster i norske aviser og romaner?</summary>
+    <div class="answer">«I» og «og»</div>
+  </details>
+
+  <details>
+    <summary><span class="nr">24</span>Hvor mange bokstaver og hvor mange siffer inngår i passnummeret i nye norske pass?</summary>
+    <div class="answer">Tre bokstaver og seks siffer</div>
+  </details>
 
 </div>
 
 <script>
-function showAll() {
-  document.querySelectorAll("details")
-    .forEach(d => d.open = true);
-}
+  function showAll() {
+    document.querySelectorAll("details")
+      .forEach(d => d.open = true);
+  }
+</script>
+
+<script
+  data-goatcounter="https://peva.goatcounter.com/count"
+  async
+  src="https://gc.zgo.at/count.js">
 </script>
 
 </body>
