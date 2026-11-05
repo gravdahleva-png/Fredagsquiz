@@ -1,54 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="no">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Halloween-quiz 30.10.2026</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fredagsquiz</title>
 <style>
 :root {
   --border: #d7dfec;
   --answerbg: #eef7f1;
   --primary: #0b57d0;
 }
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-
   background:
-    linear-gradient(
-      rgba(15,20,35,0.55),
-      rgba(15,20,35,0.55)
-    ),
+    linear-gradient(rgba(15,20,35,0.55),rgba(15,20,35,0.55)),
     url("quizimage.jpeg");
-
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-
 .wrap {
   max-width: 900px;
   margin: auto;
   padding: 20px;
 }
-
 .quiztitle {
   font-size: 3rem;
   margin-bottom: 5px;
   color: white;
-  text-shadow: 0 3px 12px (0,0,0,0.6);
+  text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
-
 .quizinfo {
   color: white;
-  opacity: 0.95;
+  opacity: .95;
   margin-top: 0;
   margin-bottom: 25px;
-  text-shadow: 0 2px 8px (0,0,0,0.6);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
-
 .showall {
   background: var(--primary);
   color: white;
@@ -59,27 +49,20 @@ body {
   font-size: 16px;
   margin-bottom: 20px;
 }
-
-.showall:hover {
-  opacity: 0.9;
-}
-
 details {
   background: rgba(255,224,178,0.94);
   backdrop-filter: blur(5px);
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 5px;
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
 }
-
 summary {
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
 }
-
 .nr {
   display: inline-flex;
   width: 28px;
@@ -93,92 +76,82 @@ summary {
   font-size: 14px;
   font-weight: bold;
 }
-
 .answer {
   padding: 12px;
   background: var(--answerbg);
   border-radius: 0 0 8px 8px;
 }
-
 details[open] .answer {
   animation: fade .3s ease;
 }
-
 @keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
-
 <body>
 <div class="wrap">
 
-<h1 class="quiztitle">🎃 Halloween-quiz</h1>
-
+<h1 class="quiztitle">Fredagsquiz</h1>
 <p class="quizinfo">
-30.10.2026<br>
+05.11.2026<br>
 Klikk på spørsmålene for å vise svar
 </p>
 
 <button class="showall" onclick="showAll()">Vis alle svar</button>
 
-<details><summary><span class="nr">1</span>I hvilket land oppstod halloween-tradisjonen?</summary><div class="answer">Irland.</div></details>
+<details><summary><span class="nr">1</span>Hvilket engelsk fotballag har en kanon i emblemet?</summary><div class="answer">Arsenal</div></details>
 
-<details><summary><span class="nr">2</span>Hva var det opprinnelige navnet på halloween?</summary><div class="answer">Samhain – «sam» betyr sommer og «fuin» betyr slutt.</div></details>
+<details><summary><span class="nr">2</span>Hvilken forfatter fra Trøndelag er aktuell med romanen «Feita»?</summary><div class="answer">Anne B. Ragde</div></details>
 
-<details><summary><span class="nr">3</span>Hva heter Halloween på norsk?</summary><div class="answer">Allehelgensaften.</div></details>
+<details><summary><span class="nr">3</span>Hvilken valuta forkortes CHF?</summary><div class="answer">Sveitsisk franc</div></details>
 
-<details><summary><span class="nr">4</span>Hvilken grønnsak ble brukt til å skjære ut ansikter før amerikanerne begynte å bruke gresskar?</summary><div class="answer">Nepe.</div></details>
+<details><summary><span class="nr">4</span>Hva er både et pronomen, en type dyrehår og en tysk lastebilprodusent?</summary><div class="answer">Man</div></details>
 
-<details><summary><span class="nr">5</span>Hva kalles et uthult gresskar med utskåret ansikt?</summary><div class="answer">Jack-o’-lantern. Navnet stammer fra legenden om «Stingy Jack», som lurte djevelen og derfor ble nektet adgang til både himmelen og helvete. Han ble dømt til å vandre på jorden i evig mørke, med bare en uthult nepe med et glødende kullstykke som lykt.</div></details>
+<details><summary><span class="nr">5</span>«Frankrikes Frank Sinatra» sto bak låten «She» og var armensk ambassadør mot slutten av livet. Hva het han?</summary><div class="answer">Charles Aznavour</div></details>
 
-<details><summary><span class="nr">6</span>Hva heter massemorderen i skrekkfilmen «Halloween»?</summary><div class="answer">Michael Myers.</div></details>
+<details><summary><span class="nr">6</span>Hvilken drikk produseres i den sydsvenske byen Åhus?</summary><div class="answer">Absolut Vodka</div></details>
 
-<details><summary><span class="nr">7</span>Hvilket godteri foretrekker amerikanerne å få når de går knask eller knep på halloween?</summary><div class="answer">M&amp;M's.</div></details>
+<details><summary><span class="nr">7</span>Hva het London da byen ble grunnlagt av romerne for rundt 2000 år siden?</summary><div class="answer">Londinium</div></details>
 
-<details><summary><span class="nr">8</span>Hvor mye veide gresskaret som satte verdensrekord i 2023?</summary><div class="answer">1247 kilo.</div></details>
+<details><summary><span class="nr">8</span>Hvilken form har potetene som utgjør det øverste laget i matretten «shepherd’s pie»?</summary><div class="answer">Potetmos</div></details>
 
-<details><summary><span class="nr">9</span>I filmen «Beetlejuice», hvilket ord må man si tre ganger for å tilkalle spøkelset?</summary><div class="answer">Beetlejuice.</div></details>
+<details><summary><span class="nr">9</span>Hva heter Tom Hanks og Steven Spielbergs miniserie om amerikanske fallskjermjegere under andre verdenskrig?</summary><div class="answer">Band of Brothers</div></details>
 
-<details><summary><span class="nr">10</span>Hvem sies å gå igjen i Tower of London?</summary><div class="answer">Anne Boleyn, Henrik VIIIs andre kone, som ble halshugget i 1536.</div></details>
+<details><summary><span class="nr">10</span>Plasser i kronologisk rekkefølge: Hundreårskrigen, seksdagerskrigen, tredveårskrigen, tolvdagerskrigen.</summary><div class="answer">Hundreårskrigen (1337–1453), trettiårskrigen (1618–1648), seksdagerskrigen (1967), tolvdagerskrigen (2025)</div></details>
 
-<details><summary><span class="nr">11</span>I middelalderen fantes en tradisjon kalt «souling» (sjelegang), som fant sted dagen etter halloween. Hva gikk den ut på?</summary><div class="answer">Folk gikk fra dør til dør, sang og tilbød seg å be for avdøde familiemedlemmer i bytte mot mat eller søtsaker.</div></details>
+<details><summary><span class="nr">11</span>Hvilke tre middelhavsøyer har over én million innbyggere?</summary><div class="answer">Sicilia, Sardinia og Kypros</div></details>
 
-<details><summary><span class="nr">12</span>Hva er tidenes mest populære halloweenkostyme?</summary><div class="answer">Heks.</div></details>
+<details><summary><span class="nr">12</span>Hvilken norsk-svensk politiker er partileder i Kristdemokraterna?</summary><div class="answer">Ebba Busch</div></details>
 
-<details><summary><span class="nr">13</span>Under hekseprosessene i Europa, hovedsakelig mellom 1560 og 1660, ble anslagsvis 50 000 mennesker henrettet for trolldom. Omtrent 80 % var kvinner. Hvor mange ble henrettet i Finnmark?</summary><div class="answer">91 personer ble henrettet i Finnmark, av totalt rundt 300 i hele Norge. Finnmark hadde bare omkring 3000 innbyggere på begynnelsen av 1600-tallet.</div></details>
+<details><summary><span class="nr">13</span>Hvilken by kalles ofte Den evige stad?</summary><div class="answer">Roma</div></details>
 
-<details><summary><span class="nr">14</span>Hvor mange ble henrettet under hekseprosessene i Salem i USA i 1692, og hvor mange av dem ble brent levende?</summary><div class="answer">20 personer ble henrettet. 19 ble hengt, én mann ble presset i hjel, og ingen ble brent.</div></details>
+<details><summary><span class="nr">14</span>Hva heter årets vinner av Nobelprisen i litteratur?</summary><div class="answer">Anne Carson</div></details>
 
-<details><summary><span class="nr">15</span>Hvor på jorden ligger inngangen til helvete, ifølge gammel katolsk tradisjon?</summary><div class="answer">Ved Vardø i Finnmark, nærmere bestemt Domholla i fjellet Domen. Området ble knyttet til Ultima Thule – verdens ytterste grense – og man forestilte seg at demoner strømmet ut fra hulen. Omkring 1520 rapporterte den katolske erkebiskopen Erik Valkendorf til paven om mystiske huler i Finnmark, der man mente at sjeler ble renset for sine synder. Mennene hans skal ha hørt fryktelige røster fra hulene.</div></details>
+<details><summary><span class="nr">15</span>Hvilket instrument er spesialiteten til jazzartisten Kenny G?</summary><div class="answer">Saksofon</div></details>
 
-<details><summary><span class="nr">16</span>Hvor mange demoner mente demonologen Johann Weyer på 1500-tallet at det fantes i helvete?</summary><div class="answer">7 405 926. Han tok utgangspunkt i Bibelens fortelling om en mann besatt av en legion demoner. En romersk legion bestod av rundt 6000 soldater, og med 666 hjelpedemoner ble det 6666 demoner per legion. Weyer opererte med 1111 slike legioner, altså 6666 × 1111 = 7 405 926 demoner.</div></details>
+<details><summary><span class="nr">16</span>I hvilken by i Maryland i USA utspiller handlingen seg i TV-serien «The Wire»?</summary><div class="answer">Baltimore</div></details>
 
-<details><summary><span class="nr">17</span>Hvorfor ønsket Johann Weyer å beregne antallet demoner i helvete?</summary><div class="answer">Han ønsket å stanse hekseforfølgelsene ved å vise at det neppe ville gjøre noen forskjell å brenne en håndfull upopulære kvinner når helvete allerede hadde millioner av militært organiserte demoner.</div></details>
+<details><summary><span class="nr">17</span>Hva kalles det fargerike rutemønsteret som forbindes med klær fra Skottland?</summary><div class="answer">Tartan</div></details>
 
-<details><summary><span class="nr">18</span>Hvor mange av englene ble til demoner, ifølge en tradisjonell tolkning av Bibelen?</summary><div class="answer">En tredjedel. I Johannes' åpenbaring beskrives en drage som river med seg en tredjedel av himmelens stjerner. Dette tolkes tradisjonelt som englene som fulgte Satan i opprøret mot Gud.</div></details>
+<details><summary><span class="nr">18</span>Hva kalles den tykke, næringsrike morsmelken som produseres like før og etter fødsel?</summary><div class="answer">Råmelk</div></details>
 
-<details><summary><span class="nr">19</span>Når fant den siste henrettelsen ved halshugging sted i Norge?</summary><div class="answer">1876. Kristoffer Nilsen Svartbækken ble halshugget med øks på Løten for rovmordet på Even Dælin. Omtrent 3000 mennesker møtte frem for å overvære henrettelsen.</div></details>
+<details><summary><span class="nr">19</span>Hva heter det engelske smørepålegget som lages av gjærrester fra ølproduksjon?</summary><div class="answer">Marmite</div></details>
 
-<details><summary><span class="nr">20</span>Når fant den siste henrettelsen ved halshugging sted i Europa?</summary><div class="answer">1977. Hamida Djandoubi ble henrettet med giljotin i Marseille i Frankrike, dømt for tortur, voldtekt og drap på en ung kvinne. Frankrike avskaffet dødsstraffen i 1981.</div></details>
+<details><summary><span class="nr">20</span>Hvordan lyder det fullstendige navnet til det amerikanske basketlaget som kalles Sixers?</summary><div class="answer">Philadelphia 76ers</div></details>
 
-<details><summary><span class="nr">21</span>Når fant den siste henrettelsen ved halshugging sted i USA?</summary><div class="answer">Aldri. Halshugging har ikke vært benyttet som offisiell henrettelsesmetode i USA etter uavhengigheten i 1776.</div></details>
+<details><summary><span class="nr">21</span>Hva kalles guder som Hyperion, Kronos, Tethys og Rhea, som hersket før Zevs og de olympiske gudene?</summary><div class="answer">Titaner</div></details>
+
+<details><summary><span class="nr">22</span>Ranger fra tyngst til lettest: hjernen, leveren, hjertet, milten.</summary><div class="answer">Leveren (1500–1800 gram), hjernen (1300–1500 gram), hjertet (300–350 gram), milten (120–200 gram)</div></details>
+
+<details><summary><span class="nr">23</span>Hva heter den kvinnelige hovedpersonen i Johan Falkbergets romanserie «Nattens brød»?</summary><div class="answer">An-Magritt</div></details>
 
 </div>
-
 <script>
 function showAll() {
-  document.querySelectorAll("details")
-    .forEach(d => d.open = true);
+  document.querySelectorAll("details").forEach(d => d.open = true);
 }
 </script>
-
 </body>
 </html>
